@@ -64,7 +64,7 @@ AES_algorithm.cpp implements the substituion-permutation network as a 4 x 4 colu
 
 ![SubBytes](/img/img2-subbytes.png)
 ![ShiftRows](/img/img3-shiftrows.png)
-![MixColumn](/img/img4-mixcolumn.png)
+![MixColumns](/img/img4-mixcolumns.png)
 ![AddRoundKey](img/img5-addroundkey.png)
 
 
