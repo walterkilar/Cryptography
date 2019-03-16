@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = AES-2561.0.0
-DISTDIR = /home/afcybergator/AES-256_GUI/.tmp/AES-2561.0.0
+DISTDIR = /home/afcybergator/Cryptography/.tmp/AES-2561.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/home/afcybergator/anaconda2/lib
 LIBS          = $(SUBLIBS) -L/home/afcybergator/anaconda2/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -772,7 +772,7 @@ moc_mainwindow.cpp: ../anaconda2/include/qt/QtWidgets/QMainWindow \
 		mainwindow.h \
 		moc_predefs.h \
 		../anaconda2/bin/moc
-	/home/afcybergator/anaconda2/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/afcybergator/anaconda2/mkspecs/linux-g++ -I/home/afcybergator/AES-256_GUI -I/home/afcybergator/anaconda2/include/qt -I/home/afcybergator/anaconda2/include/qt/QtWidgets -I/home/afcybergator/anaconda2/include/qt/QtGui -I/home/afcybergator/anaconda2/include/qt/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/home/afcybergator/anaconda2/bin/moc $(DEFINES) --include ./moc_predefs.h -I/home/afcybergator/anaconda2/mkspecs/linux-g++ -I/home/afcybergator/Cryptography -I/home/afcybergator/anaconda2/include/qt -I/home/afcybergator/anaconda2/include/qt/QtWidgets -I/home/afcybergator/anaconda2/include/qt/QtGui -I/home/afcybergator/anaconda2/include/qt/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:

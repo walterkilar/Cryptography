@@ -16,8 +16,8 @@
 /*
  * @author	Walt Kilar 2019
  * @file	AES_algorithm.h
- * @brief	AES algorithm functions, such as S-box, ShiftRows, et cetera
- * @todo	Add functionality for AES-128
+ * @brief	Written in 2010 for Norwich University MSIA project.
+ * @todo	Add functionality for multiple AES modes.
  * 
 */
 
@@ -27,6 +27,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+/*
+ * KeyExpansion 
+ * @ param values Round keys are derived from the cipher key using Rijndael's key schedule 
+ * using a 128-bit round key block for each round plus one more. 
+ * @ return column major array of keys 
+ * @ remark 10 rounds for 128-bit keys, 12 rounds for 192-bit keys, and 14 rounds for 256-bit keys 
+ *
+*/
 
 AES::AES(unsigned char* key)
 {
@@ -77,6 +85,12 @@ AES::~AES()
 {
 
 }
+
+/*
+ * Initial round key addition 
+ * @param AddRoundKey combines each byte of the state with a block of the round key via bitwise xor.
+ * @ return bitwise xor column major array
+*/
 
 unsigned char* AES::Cipher(unsigned char* input)
 {
@@ -212,6 +226,15 @@ void AES::KeyExpansion(unsigned char* key, unsigned char w[][4][4])
 		}
 	}
 }
+
+/*
+ * Main and final round key addition
+ * @ param SubBytes - nonlinear substitution of bytes via lookup table
+ * @ param ShiftRows - transposition of the last three rows of the state
+ * @ param MixColumns - linear mixing of the four bytes in each column
+ * @ param AddRoundKey - same as above
+ * @ return bitwise xor column major array
+*/
 
 unsigned char AES::FFmul(unsigned char a, unsigned char b)
 {
