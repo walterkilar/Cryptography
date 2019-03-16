@@ -3,6 +3,7 @@ Advanced Encryption Standard (AES) code implemented in two graphical user interf
 
 ## AES-256_GUI
 Written by Walt Kilar in 2010 for Norwich University MSIA project.
+![AES-256 GUI](img/AES-256_GUI.png)
 
 ### Overview
 Simple AES-256 application with QT graphical interface
