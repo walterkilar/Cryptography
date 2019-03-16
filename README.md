@@ -37,13 +37,14 @@ Simple AES-256 application with QT graphical interface
 The Advanced Encryption Standard (AES) is described in National Institute of Standards and Technology (NIST) Federal Information Publication Standard (FIPS) 197 and is implemented here as follows:
 
 AES_algorithm.cpp implements the substituion-permutation network as a 4 x 4 column-major array of bytes termed as the state. Calculations are performed in a finite field.
+![crypto state](/img/img1-state.png)
 
 1. KeyExpansion 
 * @ param values Round keys are derived from the cipher key using Rijndael's key schedule using a 128-bit round key block for each round plus one more.
 * @ return column major array of keys
 * @ remark 10 rounds for 128-bit keys, 12 rounds for 192-bit keys, and 14 rounds for 256-bit keys
 
-AES::AES(unsigned char* key){ unsigned char sBox[] = {...}
+* AES::AES(unsigned char* key){ unsigned char sBox[] = {...}
 
 2. Initial round key addition - AddRoundKey combines each byte of the state with a block of the round key via bitwise xor.
 * @param AddRoundKey combines each byte of the state with a block of the round key via bitwise xor.
@@ -60,5 +61,10 @@ AES::AES(unsigned char* key){ unsigned char sBox[] = {...}
  * @ param MixColumns - linear mixing of the four bytes in each column
  * @ param AddRoundKey - same as above
  * @ return bitwise xor column major array
+
+![SubBytes](/img/img2-subbytes.png)
+![ShiftRows](/img/img3-shiftrows.png)
+![MixColumn](/img/img4-mixcolumn.png)
+![AddRoundKey](img/img5-addroundkey.png)
 
 
