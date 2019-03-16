@@ -1,0 +1,17 @@
+Test vectors
+
+16-byte plaintext:
+	ASCII: 		anthropomorphism
+	Hexadecimal:	61 6e 74 68 72 6f 70 6f 6d 6f 72 70 68 69 73 6d 
+16-byte key:
+	ASCII:		jazziestbuzzkill
+	Hexadecimal:	6a 61 7a 7a 69 65 73 74 62 75 7a 7a 6b 69 6c 6c 
+16-byte ciphertext:
+	Hexadecimal:	B7 48 A9 32 CC 18 98 AD 90 2C 3D 5B 39 5C 1A B9 
+	ASCII:		·H©2Ì­,=[9\¹
+24-byte key:
+	ASCII:		jazziestbuzzkillquizzers
+	Hexadecimal:	6a 61 7a 7a 69 65 73 74 62 75 7a 7a 6b 69 6c 6c 71 75 69 7a 7a 65 72 73 
+32-byte key:
+	ASCII:		jazziestbuzzkillquizzerszizzling
+	Hexadecimal:	6a 61 7a 7a 69 65 73 74 62 75 7a 7a 6b 69 6c 6c 71 75 69 7a 7a 65 72 73 7a 69 7a 7a 6c 69 6e 67 
